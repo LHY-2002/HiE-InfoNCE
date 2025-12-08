@@ -9,7 +9,7 @@ def evaluate(config,
              model,
              query_loader,
              gallery_loader,
-             ranks=[1, 5, 10],  # 要查看的Recall排名
+             ranks=[1, 5, 10],
              step_size=1000,
              cleanup=True):
     
@@ -55,7 +55,7 @@ def evaluate(config,
         gc.collect()
         #torch.cuda.empty_cache()
     
-    return CMC[0]  # 返回Recall1
+    return CMC[0]
 
 
 def eval_query(qf,ql,gf,gl):
